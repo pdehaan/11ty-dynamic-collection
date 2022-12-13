@@ -1,0 +1,25 @@
+---
+title: INdex
+---
+
+<div data-debug=1>
+{% for p in collections.dynamic.getFilteredByTags('vegetable', 'carrot') %}
+<p>{{ p.data.title }} -- {{ p.url }} -- {{ p.data.tags | dump | safe }}</p>
+{% endfor %}
+</div>
+
+---
+
+<div data-debug=2>
+{% for p in collections._tomatoes %}
+<p>{{ p.data.title }}</p>
+{% endfor %}
+</div>
+
+---
+
+<div data-debug=2>
+{% for p in collections._vegetables %}
+<p>{{ p.data.title }}</p>
+{% endfor %}
+</div>
